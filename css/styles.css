@@ -9,6 +9,10 @@
   --header-part-logo: #000000;
   --hover-hero-btn: #188ce8;
   --header-border: #ececec;
+  --team-border: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --portfolio-border: #eeeeee;
+  --set-margin-card: 30px;
 }
 
 body {
@@ -234,7 +238,7 @@ button {
 
 .activity-list {
   display: flex;
-  margin-right: -30px;
+  margin-right: calc(-1 * var(--set-margin-card));
 }
 
 .activity-title {
@@ -248,8 +252,8 @@ button {
 }
 
 .activity-item {
-  margin-right: 30px;
-  flex-basis: calc (100% / 3 -30px);
+  margin-right: var(--set-margin-card);
+  flex-basis: calc (100% / 3 - var(--set-margin-card));
 }
 
 /* <-----------TEAM-------------> */
@@ -270,17 +274,16 @@ button {
 
 .team-list {
   display: flex;
-  margin-right: -30px;
+  margin-right: calc(-1 * var(--set-margin-card));
 }
 
 .team-item {
-  margin-right: 30px;
-  flex-basis: calc(100% / 3 - 30px);
+  margin-right: var(--set-margin-card);
+  flex-basis: calc(100% / 3 - var(--set-margin-card));
   padding-bottom: 30px;
 
   background-color: var(--main-page-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--team-border);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -373,23 +376,23 @@ button {
 .examples-list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: -30px;
-  margin-right: -30px;
+  margin-bottom: calc(-1 * var(--set-margin-card));
+  margin-right: calc(-1 * var(--set-margin-card));
 }
 
 .example-item {
-  margin-bottom: 30px;
-  margin-right: 30px;
-  flex-basis: calc(100% / 3 - 30px);
+  margin-bottom: var(--set-margin-card);
+  margin-right: var(--set-margin-card);
+  flex-basis: calc(100% / 3 - var(--set-margin-card));
 }
 
 .example-caption {
   padding: 20px 24px;
 
   background-color: var(--main-page-color);
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid var(--portfolio-border);
+  border-left: 1px solid var(--portfolio-border);
+  border-bottom: 1px solid var(--portfolio-border);
 }
 .example-title {
   color: var(--main-text-color);
